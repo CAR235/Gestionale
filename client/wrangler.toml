@@ -12,11 +12,18 @@ bucket = "./dist"
 [build]
 command = "npm run build"
 publish = "dist"
-main = "./dist/index.html"
 
 [build.environment]
 NODE_VERSION = "18"
-API_BASE_URL = "https://api.yourdomain.com"
+API_BASE_URL = "https://gestional.xdcar235.workers.dev"
+
+[workers_site]
+entry-point = "workers-site"
 
 [build.upload]
 format = "service-worker"
+
+[[rules]]
+type = "NavigationRoute"
+route = "/.*"
+allowlist = ["/", "/index.html"]
