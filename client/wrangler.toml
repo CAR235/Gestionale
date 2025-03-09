@@ -5,6 +5,7 @@ route = ""
 zone_id = ""
 usage_model = ""
 workers_dev = true
+pages_build_output_dir = "dist"
 
 [site]
 bucket = "./dist"
