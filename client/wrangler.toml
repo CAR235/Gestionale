@@ -1,4 +1,4 @@
-name = "gestioal"
+name = 'gestional'
 type = "webpack"
 account_id = ""
 workers_dev = true
@@ -10,5 +10,5 @@ compatibility_date = "2024-03-09"
 bucket = "./dist"
 
 [build]
-command = "cd client && npm install && npm run build"
-upload_dir = "client/dist"
+command = "npm install && npm run build"
+upload_dir = "dist"
