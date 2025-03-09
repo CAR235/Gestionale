@@ -1,4 +1,4 @@
-name = "agency-desktop"
+name = "gestional"
 type = "webpack"
 account_id = ""
 route = ""
@@ -12,6 +12,8 @@ bucket = "./dist"
 [build]
 command = "npm run build"
 publish = "dist"
+deploy_command = "npx wrangler pages deploy dist"
+path = "/client"
 
 [build.environment]
 NODE_VERSION = "18"
