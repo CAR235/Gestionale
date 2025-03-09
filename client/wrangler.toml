@@ -1,0 +1,19 @@
+name = "agency-desktop"
+type = "webpack"
+account_id = ""
+route = ""
+zone_id = ""
+usage_model = ""
+workers_dev = true
+
+[site]
+bucket = "./dist"
+entry-point = "workers-site"
+
+[build]
+command = "npm run build"
+publish = "dist"
+
+[build.environment]
+NODE_VERSION = "18"
+API_BASE_URL = "https://api.yourdomain.com"

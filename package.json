@@ -53,5 +53,8 @@
     "socket.io": "^4.8.1",
     "sqlite3": "^5.1.6",
     "ws": "^8.15.1"
+  },
+  "devDependencies": {
+    "terser": "^5.39.0"
   }
 }
