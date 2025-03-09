@@ -8,7 +8,7 @@ workers_dev = true
 
 [site]
 bucket = "./dist"
-entry-point = "workers-site"
+entry-point = "dist/index.html"
 
 [build]
 command = "npm run build"
@@ -17,3 +17,6 @@ publish = "dist"
 [build.environment]
 NODE_VERSION = "18"
 API_BASE_URL = "https://api.yourdomain.com"
+
+[build.upload]
+format = "service-worker"

@@ -15,9 +15,15 @@ export default defineConfig({
     emptyOutDir: true,
     rollupOptions: {
       output: {
-        manualChunks: undefined
+        manualChunks: {
+          vendor: ['react', 'react-dom', 'react-router-dom', '@mui/material', '@emotion/react', '@emotion/styled'],
+          charts: ['recharts'],
+          calendar: ['react-big-calendar', 'date-fns'],
+          motion: ['framer-motion']
+        }
       }
     },
+    chunkSizeWarningLimit: 1500,
     target: 'esnext',
     sourcemap: true,
     // Ensure static assets are included
