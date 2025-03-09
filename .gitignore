@@ -45,8 +45,6 @@ uploads/*
 main.js
 preload.js
 server.js
-package.json
-package-lock.json
 
 # Electron specific
 **/electron/dist/

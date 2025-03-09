@@ -19,7 +19,18 @@ export default defineConfig({
       }
     },
     target: 'esnext',
-    sourcemap: true
+    sourcemap: true,
+    // Ensure static assets are included
+    assetsDir: 'assets',
+    // Optimize chunks
+    chunkSizeWarningLimit: 1000,
+    // Minify output
+    minify: 'terser',
+    terserOptions: {
+      compress: {
+        drop_console: true
+      }
+    }
   },
   define: {
     'process.env.API_BASE_URL': JSON.stringify(process.env.API_BASE_URL || 'http://localhost:3000')

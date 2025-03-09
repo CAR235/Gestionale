@@ -1,0 +1,57 @@
+{
+  "name": "agency-desktop",
+  "version": "1.0.0",
+  "description": "Desktop application for agency management",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dev": "concurrently \"cd client && npm run dev\" \"electron .\"",
+    "build": "cd client && npm install && npm run build",
+    "package": "electron-builder"
+  },
+  "build": {
+    "appId": "com.agency.desktop",
+    "productName": "Agency Desktop",
+    "directories": {
+      "output": "dist"
+    },
+    "win": {
+      "target": "nsis",
+      "icon": "client/public/logo.svg"
+    },
+    "mac": {
+      "target": "dmg",
+      "icon": "client/public/logo.svg"
+    },
+    "linux": {
+      "target": "AppImage",
+      "icon": "client/public/logo.svg"
+    },
+    "files": [
+      "**/*",
+      "!**/node_modules/*/{CHANGELOG.md,README.md,README,readme.md,readme}",
+      "!**/node_modules/*/{test,__tests__,tests,powered-test,example,examples}",
+      "!**/node_modules/*.d.ts",
+      "!**/node_modules/.bin",
+      "!**/*.{iml,o,hprof,orig,pyc,pyo,rbc,swp,csproj,sln,xproj}",
+      "!.editorconfig",
+      "!**/._*",
+      "!**/{.DS_Store,.git,.hg,.svn,CVS,RCS,SCCS,.gitignore,.gitattributes}",
+      "!**/{__pycache__,thumbs.db,.flowconfig,.idea,.vs,.nyc_output}",
+      "!**/{appveyor.yml,.travis.yml,circle.yml}",
+      "!**/{npm-debug.log,yarn.lock,.yarn-integrity,.yarn-metadata.json}"
+    ]
+  },
+  "dependencies": {
+    "concurrently": "^8.2.2",
+    "cors": "^2.8.5",
+    "electron": "^28.1.0",
+    "electron-builder": "^24.9.1",
+    "express": "^4.18.2",
+    "multer": "^1.4.5-lts.1",
+    "nodemon": "^3.0.2",
+    "socket.io": "^4.8.1",
+    "sqlite3": "^5.1.6",
+    "ws": "^8.15.1"
+  }
+}
